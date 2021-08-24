@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #255;
+            position: -webkit-sticky; /* Safari */
+            position: -sticky;
+            top: 0;
+        }
+
+        li {
+            float: center;
+        }
+
+        li a {
+            display: block;
+            color: yellow;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #370;
+        }
+
+        .active {
+            background-color: #5CAF80;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    {% block header %}
+        <h2>Home Page</h2>
+    {% endblock %}
+</div>
+
+<ul>
+    <li><a class="active" href="/">Childhood</a></li>
+    <li><a href="/youth">Youth</a></li>
+    <li><a href="/adult">Adult</a></li>
+    <li><a href="/senility">Senility</a></li>
+</ul>
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>
