@@ -32,7 +32,7 @@ def add_event(request):
         form = EventForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('/events/')
+        return redirect('/add_event/')
     return render(request, 'life/add_event.html', {'form': EventForm()})
 
 

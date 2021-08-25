@@ -7,5 +7,4 @@ urlpatterns = [
     path('adult/', adult),
     path('senility/', senility),
     path('add_event/', add_event),
-    path('events/',add_event),
     ]
