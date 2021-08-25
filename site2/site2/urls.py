@@ -15,15 +15,14 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
-from life.views import childhood, youth, adult, senility
+from django.urls import path, include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', childhood),
-    path('youth/', youth),
-    path('adult/', adult),
-    path('senility/', senility)
+    path('', include('life.urls')),
+    #path('myapi/', my_api),
+    #path('news/', news),
 
 ]
 

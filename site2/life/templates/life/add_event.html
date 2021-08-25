@@ -1,0 +1,15 @@
+{% extends 'life/common.html' %}
+
+{% block header %}
+    <h2>Add Event</h2>
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <li><a> {{ form.as_p }}</a></li>
+        <input type="submit" value="Add">
+    </form>
+{% endblock %}
+
+
